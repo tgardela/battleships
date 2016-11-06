@@ -1,0 +1,40 @@
+{% extends 'base_templates/base.html' %}
+
+{% block content %}
+
+<h1 class="title">Welcome to the Ultimate Battle of Ship Commanders!</h1>
+<div>
+    <p>Welcome to the greatest Battleship game of all time!<br />
+    Rules are simple:</p>
+
+    <p>Whoever sinks all the ships that belong to his opponent wins!</p>
+    <p>
+        <ul>Markings on the board:
+            <li>'*' - unshot part of the ocean</li>
+            <li>'X' - hit</li>
+            <li>'O' - miss</li>
+        </ul>
+    </p>
+    <p>
+        <ul>There are 7 ships to sink:
+            <li>one Aircraft Carries which takes 5 parts of the ocean</li>
+            <li>one Batleship which takes 4 parts of the ocean</li>
+            <li>one Submarine which takes 3 parts of the ocean</li>
+            <li>two Destroyers which take 2 parts of the ocean each</li>
+            <li>two Patrol Boats which take 1 part of the ocean each</li>
+        </ul>
+    </p>
+    <p>The ships cannot touch each other in any way (horizontally, vertically or across)</p>
+    <p>Good luck!</p>
+</div>
+<div>
+    <h3>Please choose the type of game:</h3>
+    <button onclick="location.href = {{ url_for('single') }};" id="btn1" class="wideSubmitBtn">
+        Lonely Pirate!
+    </button>
+    <button onclick="location.href = {{ url_for('first') }};" id="btn2" class="wideSubmitBtn">
+        Mano a Mano Naval Battle!
+    </button>
+</div>
+
+{% endblock content %}

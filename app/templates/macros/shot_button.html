@@ -1,0 +1,13 @@
+{% macro shot_button(board, row, col) %}
+    <form action="." method="POST">
+    {% if board[row][col] == '*' %}
+        <button class="oceanBtn oceanBtnEmpty" type="submit" name="coord" value="A2">{{ board[row][col] }}</button>
+    {% elif board[row][col] == 'X' %}
+         <button class="oceanBtn oceanBtnHit" type="submit" name="coord" value="A2">{{ board[row][col] }}</button>
+    {% elif board[row][col] == 'O' %}
+        <button class="oceanBtn oceanBtnMissed" type="submit" name="coord" value="A2">{{ board[row][col] }}</button>
+    {% endif %}
+        <input type="hidden" name="row" value="{{ row }}">
+        <input type="hidden" name="col" value="{{ col }}">
+    </form>
+{% endmacro %}

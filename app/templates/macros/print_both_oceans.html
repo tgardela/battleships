@@ -1,0 +1,12 @@
+{% macro print_both_oceans(left, right) %}
+
+{% from 'macros/print_shooting_board.html' import print_shooting_board %}
+{% from 'macros/print_own_board.html' import print_own_board %}
+
+    <td class="playScreenOceanTd">
+        {% if left %}{{ print_shooting_board(left) }}{% endif %}
+    </td>
+    <td class="playScreenOceanTd">
+        {% if right %}{{ print_own_board(right) }}{% endif %}
+    </td>
+{% endmacro %}

@@ -1,0 +1,126 @@
+body {
+    background-image: url("ocean-04.jpg");
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.playTitle {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.playScreenTh{
+    text-align: center;
+    font-weight: bold;
+ }
+
+ .playScreenThMsg {
+    color: black;
+    font-size: 25px;
+}
+
+.playScreenThMsgShot {
+    color: red;
+    font-size: 25px;
+}
+
+.playScreenOceanTd {
+    text-align: center;
+    width: 700px;
+}
+
+.oceanTable {
+    horizontal-align: middle;
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.oceanTableTh {
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.oceanTableTd {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    padding:0px;
+    font-size: 20px;
+    font-weight: bold;
+    border-collapse:collapse;
+    font_family: arial;
+}
+
+.oceanTableTdMissed {
+    background-color: blue;
+}
+
+.oceanTableTdHit {
+    background-color: red;
+}
+
+.wideSubmitBtn {
+    width: 225px;
+    height: 35px;
+    font-size: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: None;
+    border-radius: 25px;
+    float: left;
+}
+
+.wideSubmitBtn:hover{
+    background-color: #2987ca;
+    color: black;
+    border: 2px solid black;
+}
+
+.oceanBtn {
+    display:inline-block;
+    width: 29px;
+    height: 29px;
+    border: 0px;
+    font-weight: bold;
+    outline: None;
+    background-color: Transparent;
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+}
+
+.oceanBtnEmpty {
+	font-size: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.oceanBtnEmpty:hover{
+    background-color: green;
+}
+
+.oceanBtnHit {
+    background-color: red;
+}
+
+.oceanBtnHit:hover{
+    background-color: black;
+}
+
+.oceanBtnMissed {
+    background-color: blue;
+}
+
+.oceanBtnMissed:hover{
+    background-color: black;
+}

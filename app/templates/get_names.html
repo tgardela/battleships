@@ -1,0 +1,12 @@
+{% extends 'base_templates/base.html' %}
+{% block content %}
+    {% if players == 1 %}
+        <button onclick="location.href = {{ url_for('single') }};" id="btn1" class="wideSubmitBtn">
+            Lonely Pirate!
+        </button>
+    {% else %}
+        <button onclick="location.href = {{ url_for('first') }};" id="btn2" class="wideSubmitBtn">
+            Mano a Mano Naval Battle!
+        </button>
+    {% endif %}
+{% endblock content %}

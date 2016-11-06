@@ -1,0 +1,16 @@
+{% macro print_shooting_board(board) %}
+{% from 'macros/shot_button.html' import shot_button %}
+    <table class="oceanTable">
+        {% for i in range(0, 11) %}
+            <tr>
+                {% for j in range(0, 11) %}
+                    {% if i == 0 or j == 0 %}
+                        <th class="oceanTableTh">{{ board[i][j] }}</th>
+                    {% else %}
+                        <td class="oceanTableTd">{{ shot_button(board, i, j) }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endmacro %}

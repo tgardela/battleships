@@ -1,0 +1,14 @@
+{% extends 'base_templates/base.html' %}
+
+{% block content %}
+    <div>
+        <p>{{ winner }} won!</p>
+        <p>Want to have another ship battle?</p>
+        <button onclick="location.href = {{ url_for('index') }};" id="btnIndex" class="wideSubmitBtn">
+            Yes!
+        </button>
+        <a type="link" href="https://www.google.pl">
+            <button class="wideSubmitBtn" type="submit">Google the answer...</button>
+        </a>
+    </div>
+{% endblock content %}

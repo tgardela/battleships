@@ -1,0 +1,45 @@
+{% extends 'base_templates/base.html' %}
+
+{% from 'macros/print_both_oceans.html' import print_both_oceans %}
+
+{% block content %}
+    <div>
+        <p class="playTitle">Player Two</p>
+        <p class="playTitle">Your task is to sink all the ships!</p>
+    </div>
+    <center>
+    <table>
+        <tr>
+            <th class="playScreenTh">Your shots</th>
+            <th class="playScreenTh">Your ships</th>
+        </tr>
+        <tr>
+            {{ print_both_oceans(second_shots, second_ships) }}
+        </tr>
+        <tr>
+            {% if first_msg %}
+                {% if second_msg %}
+                    <th class="playScreenTh playScreenThMsgShot">You {{ second_msg }}</th>
+                {% else %}
+                    <th class="playScreenTh playScreenThMsgShot"></th>
+                {% endif %}
+                    <th class="playScreenTh playScreenThMsgShot">Your opponent {{ first_msg }}</th>
+            {% endif %}
+        </tr>
+        <tr>
+            <td>
+                <button onclick="location.href = {{ url_for('index') }};" id="btn1" class="wideSubmitBtn">
+                    Home screen
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="playScreenOceanTd">
+                <p>Opponents ship placement (TEST)</p>
+                {% from 'macros/print_own_board.html' import print_own_board %}
+                {% if first_ships %}{{ print_own_board(first_ships) }}{% endif %}
+            </td>
+        </tr>
+    </table>
+    </center>
+{% endblock content %}

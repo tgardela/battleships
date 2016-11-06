@@ -1,0 +1,21 @@
+{% macro print_own_board(board) %}
+    <table class="oceanTable">
+        {% for i in range(0, 11) %}
+            <tr>
+                {% for j in range(0, 11) %}
+                    {% if i == 0 or j == 0 %}
+                         <th class="oceanTableTh">{{ board[i][j] }}</th>
+                    {% else %}
+                        {% if board[i][j] == 'X' %}
+                            <td class="oceanTableTd oceanTableTdHit">{{ board[i][j] }}</td>
+                        {% elif board[i][j] == 'O' %}
+                            <td class="oceanTableTd oceanTableTdMissed">{{ board[i][j] }}</td>
+                        {% else %}
+                            <th class="oceanTableTd">{{ board[i][j] }}</th>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endmacro %}
