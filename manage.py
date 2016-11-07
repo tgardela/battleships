@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from app.app import manager
 import app.views
 
