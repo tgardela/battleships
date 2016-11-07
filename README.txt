@@ -18,6 +18,9 @@ Commands:
     (Linux):
         venvBattleships\bin\activate
         
+- install desired addins for the app in your venv:
+    pip install -r "requirements.txt"
+        
 - go inside battleships/app
     cd battleships
         
