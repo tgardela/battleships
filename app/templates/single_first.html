@@ -30,14 +30,5 @@
             {% endif %}
         </tr>
     </table>
-    <table>
-        <tr>
-            <td class="playScreenOceanTd">
-                <p>Opponents ship placement (TEST)</p>
-                {% from 'macros/print_own_board.html' import print_own_board %}
-                {% if second_ships %}{{ print_own_board(second_ships) }}{% endif %}
-            </td>
-        </tr>
-    </table>
     </center>
 {% endblock content %}
