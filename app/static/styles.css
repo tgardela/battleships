@@ -1,14 +1,26 @@
 body {
-    background-image: url("ocean-04.jpg");
+    background-image: url("ocean3.jpg");
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .title {
     font-size: 30px;
+    color: white;
+}
+
+.index {
+	font-size: 20px;
 }
 
 .playTitle {
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.playSmallTitle {
+	font-size: 25px;
     text-align: center;
     font-weight: bold;
 }
@@ -17,6 +29,13 @@ body {
     text-align: center;
     font-weight: bold;
  }
+
+ .endTitleSmall {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
 
  .playScreenThMsg {
     color: black;
@@ -68,6 +87,25 @@ body {
     background-color: red;
 }
 
+.homeBtn {
+    width: 225px;
+    height: 35px;
+    font-size: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: None;
+    border-radius: 25px;
+    float: right;
+}
+
+.homeBtn:hover{
+    background-color: #2987ca;
+    color: black;
+    border: 2px solid black;
+}
+
 .wideSubmitBtn {
     width: 225px;
     height: 35px;
@@ -78,7 +116,7 @@ body {
     color: white;
     border: None;
     border-radius: 25px;
-    float: left;
+    float: center;
 }
 
 .wideSubmitBtn:hover{

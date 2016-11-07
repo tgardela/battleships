@@ -1,10 +1,12 @@
 import unittest
+
 from aiplayer import *
 
 
 class TestAIPlayer(unittest.TestCase):
     def setUp(self):
         pass
+
 
     def test_get_shot_returns_in_margin(self):
         row, col = get_shot()

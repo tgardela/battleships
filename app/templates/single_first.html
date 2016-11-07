@@ -4,8 +4,12 @@
 
 {% block content %}
     <div>
+        <button onclick="location.href = {{ url_for('index') }};" id="btn1" class="homeBtn">
+               Home screen
+        </button>
+        <br>
         <p class="playTitle">Player One</p>
-        <p class="playTitle">Your task is to sink all the ships!</p>
+        <p class="playSmallTitle">Your task is to sink all the ships!</p>
     </div>
     <center>
     <table>
@@ -20,15 +24,13 @@
             {% if first_msg %}
                 <th class="playScreenTh playScreenThMsgShot">You {{ first_msg }}</th>
                 <th class="playScreenTh playScreenThMsgShot">Your opponent {{ second_msg }}</th>
+            {% else %}
+                <th class="playScreenTh playScreenThMsgShot">Shoot yor first shot!</th>
+                <th class="playScreenTh playScreenThMsgShot">Waiting for opponents first shot</th>
             {% endif %}
         </tr>
-        <tr>
-            <td>
-                <button onclick="location.href = {{ url_for('index') }};" id="btn1" class="wideSubmitBtn">
-                    Home screen
-                </button>
-            </td>
-        </tr>
+    </table>
+    <table>
         <tr>
             <td class="playScreenOceanTd">
                 <p>Opponents ship placement (TEST)</p>

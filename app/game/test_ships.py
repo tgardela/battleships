@@ -18,9 +18,6 @@ class TestShipPlacement(unittest.TestCase):
             self.board_with_ships_near_boundaries[2][10 - i] = 'S'
             self.board_with_ships_near_boundaries[9][10 - i] = 'S'
 
-        # print_board(self.empty_board)
-        # print_board(self.board_with_ships_near_boundaries)
-
 
     def test_get_board(self):
         board = get_board()

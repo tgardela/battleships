@@ -5,13 +5,13 @@ from .ships import get_board, get_board_with_ships_placed_randomly, return_hit_s
 
 def set_oceans_and_ships(number_of_players):
     session['first_shots'] = get_board()
+    session['first_ships'] = get_board_with_ships_placed_randomly()
     session['second_ships'] = get_board_with_ships_placed_randomly()
 
     if number_of_players == 2:
         session['second_shots'] = get_board()
         session['first_msg'] = ''
         session['second_msg'] = ''
-    session['first_ships'] = get_board_with_ships_placed_randomly()
 
 
 def get_player_shot():
