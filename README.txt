@@ -14,9 +14,9 @@ Commands:
     
 - run your virtualenv
     (Windows):
-        venvBattleships\Scripts\activate
+        <your_dir>\venv\venvBattleships\Scripts\activate.bat
     (Linux):
-        venvBattleships\bin\activate
+        source <your_dir>\venv/venvBattleships/bin/activate
         
 - go inside battleships/app
     cd battleships
