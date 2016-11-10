@@ -1,6 +1,6 @@
 from random import randint
 
-from .ship_position_validator import ShipPositionValidator
+from .ship_placement_validator import ShipPositionValidator
 
 class Ship(object):
         

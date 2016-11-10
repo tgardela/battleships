@@ -21,12 +21,10 @@ def get_board():
 
 def place_ship_on_board(board, size, name):
     ship = Ship(board, size, name)
+
     while not ship.can_be_put_there():
-
-        print(size)
-        print_board(board)
-
         ship.set_start_point()
+
     board = put_ship_on_board(board, ship)
     return board
 

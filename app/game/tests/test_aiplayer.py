@@ -1,6 +1,6 @@
 import unittest
 
-from aiplayer import *
+from app.game.aiplayer import *
 
 
 class TestAIPlayer(unittest.TestCase):
