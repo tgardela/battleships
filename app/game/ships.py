@@ -45,7 +45,11 @@ def place_ship_on_board(board, ship, orientation):
         print(ship, starting_point)
         print_board(board)
         starting_point = get_starting_point(ship, orientation)
+<<<<<<< HEAD
         shipV = ValidShip(board, ship, starting_point, orientation)
+=======
+        
+>>>>>>> bbbc66d47c3720b919b6dbf76428c46dbfd529c8
     board = put_ship_on_board(board, ship, starting_point, orientation)
     return board
 
@@ -178,6 +182,7 @@ def check_if_ship_can_be_put_there(board, ship, start, orientation):
 
 def put_ship_on_board(board, ship, starting_point, orientation):
     ships = {5 : 'C', 4 : 'B', 3 : 'S', 2 : 'D', 1 : 'P'}
+    
     if orientation == 'vertical':
         for i in range(ship):
             board[starting_point[0] + i][starting_point[1]] = ships[ship]

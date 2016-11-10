@@ -12,18 +12,6 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/get_names/<int:players>/', methods=['GET', 'POST'])
-def get_names(players):
-    if request.method == 'GET':
-        return render_template('get_names.html', players=players)
-    if request.method == 'POST':
-        session['first_name'] = request.form['first_name']
-        if players == 1:
-            session['second_name'] = request.form['second_name']
-        else:
-            return render_template('index.html')
-
-
 @app.route('/single/', methods=['GET', 'POST'])
 def single():
     if session.get('first_shots') is None:

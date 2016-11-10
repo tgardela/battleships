@@ -14,21 +14,26 @@ Commands:
     
 - run your virtualenv
     (Windows):
-        venvBattleships\Scripts\activate
+        <your_dir>\venv\venvBattleships\Scripts\activate.bat
     (Linux):
-        venvBattleships\bin\activate
+        source <your_dir>\venv/venvBattleships/bin/activate
         
 - install desired addins for the app in your venv:
     pip install -r "requirements.txt"
         
 - go inside battleships/app
     cd battleships
-        
+
+- install additional frameworks needed to run the app from requirements file:
+    pip intall -r "requirements.txt"
+
 - run the manage.py script with 'runserver' option
     (Windows):
         python manage.py runserver
     (Linux):
         ./manage.py runserver
         
-- open you faworite internet browser and go to:
+- open your faworite internet browser and go to:
     http://localhost:5000/
+
+- provide some feedback about the app :)

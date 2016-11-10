@@ -1,4 +1,4 @@
-from .ship import ValidShip
+from .ship import Ship
 
 
 def get_board_with_ships_placed_randomly():
@@ -20,7 +20,7 @@ def get_board():
 
 
 def place_ship_on_board(board, size, name):
-    ship = ValidShip(board, size, name)
+    ship = Ship(board, size, name)
     while not ship.can_be_put_there():
 
         print(size)

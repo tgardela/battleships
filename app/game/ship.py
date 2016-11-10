@@ -2,7 +2,7 @@ from random import randint
 
 from .ship_position_validator import ShipPositionValidator
 
-class ValidShip(object):
+class Ship(object):
         
     def __init__(self, board, size, name):
         self.board = board
