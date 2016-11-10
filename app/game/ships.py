@@ -1,5 +1,7 @@
 from random import randint
 
+from .validatedShip import ValidShip
+
 
 def get_board_with_ships_placed_randomly():
     board = get_board()
@@ -28,11 +30,22 @@ def get_ship_orientation():
     return orientation
 
 
+# def place_ship_on_board(board, ship, orientation):
+#     starting_point = get_starting_point(ship, orientation)
+#
+#     while not check_if_ship_can_be_put_there(board, ship, starting_point, orientation):
+#         starting_point = get_starting_point(ship, orientation)
+#     board = put_ship_on_board(board, ship, starting_point, orientation)
+#     return board
+
 def place_ship_on_board(board, ship, orientation):
     starting_point = get_starting_point(ship, orientation)
-
-    while not check_if_ship_can_be_put_there(board, ship, starting_point, orientation):
+    shipV = ValidShip(board, ship, starting_point, orientation)
+    while not shipV.check_if_ship_can_be_put_there():
+        print(ship, starting_point)
+        print_board(board)
         starting_point = get_starting_point(ship, orientation)
+        shipV = ValidShip(board, ship, starting_point, orientation)
     board = put_ship_on_board(board, ship, starting_point, orientation)
     return board
 

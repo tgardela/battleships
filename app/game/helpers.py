@@ -1,6 +1,6 @@
 from flask import request, session
 
-from .ships import get_board, get_board_with_ships_placed_randomly, return_hit_ship_name
+from .ship_placement import get_board, get_board_with_ships_placed_randomly, return_hit_ship_name
 
 
 def set_oceans_and_ships(number_of_players):
