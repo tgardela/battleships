@@ -1,13 +1,13 @@
 import unittest
 
 from app.game.ship_placement_validator import ShipPositionValidator
-from app.game.ship_placement import get_board
+from app.game.ship_placement import get_empty_board
 
 class TestShipPlacement(unittest.TestCase):
     def setUp(self):
-        self.empty_board = get_board() 
+        self.empty_board = get_empty_board()
 
-        self.board_with_ships_near_boundaries = get_board()
+        self.board_with_ships_near_boundaries = get_empty_board()
         self.board_with_ships_near_boundaries[5][5] = 'S'
         for i in range(1, 4):
             self.board_with_ships_near_boundaries[i + 1][2] = 'S'

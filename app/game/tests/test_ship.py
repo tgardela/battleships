@@ -1,15 +1,15 @@
 import unittest
 
 from app.game.ship import Ship
-from app.game.ship_placement import get_board
+from app.game.ship_placement import get_empty_board
 
 
 class TestShipPlacement(unittest.TestCase):
     def setUp(self):
-        self.empty_board = get_board()
+        self.empty_board = get_empty_board()
         self.ship = Ship(self.empty_board, size=5, name='an Aircraft Carrier')
 
-        self.full_board = get_board()
+        self.full_board = get_empty_board()
         for i in range(1, 11):
             for j in range(1, 11):
                 self.full_board[i][j] = 'S'
@@ -46,6 +46,11 @@ class TestShipPlacement(unittest.TestCase):
 
         self.assertEqual(False, ship.can_be_put_there())
 
+
+    def test_get_ship_name(self):
+        ship = Ship(self.full_board, size=5, name='an Aircraft Carrier')
+
+        self.assertEqual('an Aircraft Carrier', ship.get_ship_name())
 
 if __name__=='__main__':
     unittest.main(verbosity=2)

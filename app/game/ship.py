@@ -43,3 +43,7 @@ class Ship(object):
     def set_ship_abbreviation(self):
         abbreviations = {5: 'C', 4: 'B', 3: 'S', 2: 'D', 1: 'P'}
         self.shipAbbreviation = abbreviations[self.size]
+
+
+    def get_ship_name(self):
+        return self.shipName

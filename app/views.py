@@ -87,4 +87,3 @@ def second():
 @app.route('/endgame/')
 def endgame():
     return render_template('endgame.html')
-
