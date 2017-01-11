@@ -22,9 +22,11 @@ def mark_shot(board, ships_to_sink, row, col):
     cell = ships_to_sink[row][col]
     if cell == '*':
         board[row][col] = 'O'
+        ships_to_sink[row][col] = 'O'
         msg ='missed'
     elif cell in ['C', 'B', 'S', 'D', 'P']:
         board[row][col] = 'X'
+        ships_to_sink[row][col] = 'X'
         msg = 'hit %s' % return_ship_name_from_cell_given(cell)
     else:
         msg = 'already shot there'
